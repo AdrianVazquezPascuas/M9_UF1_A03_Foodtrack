@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Truck</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Food Truck</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="foodDropdown" role="button" data-bs-toggle="dropdown">Menú</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Freds</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="pages/entrepans.html">Entrepà de Ibèric</a></li>
+                                    <li><a class="dropdown-item" href="pages/entrepans.html">Entrepà de Formatge</a></li>
+                                    <!-- Añade más opciones aquí -->
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Calents</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="pages/burger.html">Burger</a></li>
+                                    <li><a class="dropdown-item" href="pages/frankfurt.html">Frankfurt</a></li>
+                                    <!-- Añade más opciones aquí -->
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Dolços</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="pages/gelats.html">Gelat Magnum</a></li>
+                                    <li><a class="dropdown-item" href="pages/creppe.html">Crêppe de Xocolata</a></li>
+                                    <!-- Añade más opciones aquí -->
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Begudes</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="pages/coca-cola.html">Coca Cola</a></li>
+                                    <li><a class="dropdown-item" href="pages/cervesa.html">Cervesa</a></li>
+                                    <!-- Añade más opciones aquí -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="qui-som.html">Qui som</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light" id="loginBtn" data-bs-toggle="tooltip" title="Iniciar Sessió"><i class="fa-solid fa-sign-in-alt"></i> Login</button>
+                <button class="btn btn-outline-light" id="logoutBtn" data-bs-toggle="tooltip" title="Tancar Sessió" style="display: none;"><i class="fa-solid fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal de Login -->
+    <div class="modal fade" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar Sessió</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label>Nom d'Usuari</label>
+                            <input type="text" class="form-control" id="username">
+                        </div>
+                        <div class="mb-3">
+                            <label>Contrasenya</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel·lar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrusel -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active"><img src="img/food1.jpg" class="d-block w-100"></div>
+            <div class="carousel-item"><img src="img/food2.jpg" class="d-block w-100"></div>
+            <div class="carousel-item"><img src="img/food3.jpg" class="d-block w-100"></div>
+            <div class="carousel-item"><img src="img/food4.jpg" class="d-block w-100"></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <a class="breadcrumb-item" href="index.html">Inici</a>
+        <span class="breadcrumb-item active">Menú</span>
+    </nav>
+
+    <!-- Cards -->
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="img/promo1.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Promo Entrepà</h5>
+                        <p class="card-text">Oferta especial aquesta setmana!</p>
+                        <button class="btn btn-success" data-bs-toggle="tooltip" title="M'agrada"><i class="fa fa-thumbs-up"></i></button>
+                        <button class="btn btn-danger" data-bs-toggle="tooltip" title="No m'agrada"><i class="fa fa-thumbs-down"></i></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Añade más cards aquí -->
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="img/promo2.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Novetat Burger</h5>
+                        <p class="card-text">Prova la nostra nova burger!</p>
+                        <button class="btn btn-success" data-bs-toggle="tooltip" title="M'agrada"><i class="fa fa-thumbs-up"></i></button>
+                        <button class="btn btn-danger" data-bs-toggle="tooltip" title="No m'agrada"><i class="fa fa-thumbs-down"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="img/promo3.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Gelat Especial</h5>
+                        <p class="card-text">Gaudeix del nostre gelat especial!</p>
+                        <button class="btn btn-success" data-bs-toggle="tooltip" title="M'agrada"><i class="fa fa-thumbs-up"></i></button>
+                        <button class="btn btn-danger" data-bs-toggle="tooltip" title="No m'agrada"><i class="fa fa-thumbs-down"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="img/promo4.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Beguda Refrescant</h5>
+                        <p class="card-text">Refresca't amb la nostra beguda especial!</p>
+                        <button class="btn btn-success" data-bs-toggle="tooltip" title="M'agrada"><i class="fa fa-thumbs-up"></i></button>
+                        <button class="btn btn-danger" data-bs-toggle="tooltip" title="No m'agrada"><i class="fa fa-thumbs-down"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Paginació -->
+    <nav>
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <!-- Añade más páginas aquí -->
+        </ul>
+    </nav>
+
+    <!-- Alerta Cookies -->
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        Aquesta web utilitza cookies.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3">
+        <p>Segueix-nos a les xarxes socials!</p>
+        <a href="#" class="text-light" data-bs-toggle="tooltip" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="text-light" data-bs-toggle="tooltip" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="text-light" data-bs-toggle="tooltip" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+            loginModal.show();
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            document.getElementById('loginBtn').innerHTML = "Benvingut " + username;
+            document.getElementById('loginBtn').style.display = 'none';
+            document.getElementById('logoutBtn').style.display = 'inline-block';
+            var modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+            modal.hide();
+        });
+
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            document.getElementById('loginBtn').innerHTML = '<i class="fa-solid fa-sign-in-alt"></i> Login';
+            document.getElementById('loginBtn').style.display = 'inline-block';
+            document.getElementById('logoutBtn').style.display = 'none';
+        });
+
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        // JavaScript para manejar los submenús
+        document.querySelectorAll('.dropdown-submenu').forEach(function (element) {
+            element.addEventListener('mouseover', function (e) {
+                let submenu = element.querySelector('.dropdown-menu');
+                if (submenu) {
+                    submenu.classList.add('show');
+                }
+            });
+            element.addEventListener('mouseout', function (e) {
+                let submenu = element.querySelector('.dropdown-menu');
+                if (submenu) {
+                    submenu.classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
