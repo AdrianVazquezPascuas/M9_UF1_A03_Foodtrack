@@ -195,22 +195,34 @@
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault();
             var username = document.getElementById('username').value;
-            document.getElementById('loginBtn').innerHTML = "Benvingut " + username;
+            document.getElementById('loginBtn').innerHTML = "Hola, " + username;
             document.getElementById('loginBtn').style.display = 'none';
             document.getElementById('logoutBtn').style.display = 'inline-block';
             var modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
             modal.hide();
+            localStorage.setItem('username', username);
         });
 
         document.getElementById('logoutBtn').addEventListener('click', function() {
             document.getElementById('loginBtn').innerHTML = '<i class="fa-solid fa-sign-in-alt"></i> Login';
             document.getElementById('loginBtn').style.display = 'inline-block';
             document.getElementById('logoutBtn').style.display = 'none';
+            localStorage.removeItem('username');
         });
 
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        // Check if user is logged in
+        window.addEventListener('load', function() {
+            var username = localStorage.getItem('username');
+            if (username) {
+                document.getElementById('loginBtn').innerHTML = "Hola, " + username;
+                document.getElementById('loginBtn').style.display = 'none';
+                document.getElementById('logoutBtn').style.display = 'inline-block';
+            }
         });
 
         // JavaScript para manejar los submenús
