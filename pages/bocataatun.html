@@ -17,47 +17,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="foodDropdown" role="button" data-bs-toggle="dropdown">Menú</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="frios.html">Fríos</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="bocatajamon.html">Bocadillo de Jamón Ibérico</a></li>
-                                    <li><a class="dropdown-item" href="bocataqueso.html">Bocadillo de Queso</a></li>
-                                    <li><a class="dropdown-item" href="bocataatun.html">Bocadillo de Atún</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="calientes.html">Calientes</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="burger.html">Burger</a></li>
-                                    <li><a class="dropdown-item" href="frankfurt.html">Frankfurt</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="dulces.html">Dulces</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="gelats.html">Gelat Magnum</a></li>
-                                    <li><a class="dropdown-item" href="creppe.html">Crêppe de Xocolata</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="bebidas.html">Bebidas</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="coca-cola.html">Coca Cola</a></li>
-                                    <li><a class="dropdown-item" href="cervesa.html">Cervesa</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../qui-som.html">Qui som</a>
-                    </li>
-                </ul>
-                <button class="btn btn-outline-light" id="loginBtn" data-bs-toggle="tooltip" title="Iniciar Sessió"><i class="fa-solid fa-sign-in-alt"></i> Login</button>
-                <button class="btn btn-outline-light" id="logoutBtn" data-bs-toggle="tooltip" title="Tancar Sessió" style="display: none;"><i class="fa-solid fa-sign-out-alt"></i> Logout</button>
+                <ul class="navbar-nav me-auto" id="menuContainer"></ul>
             </div>
         </div>
     </nav>
@@ -73,46 +33,42 @@
 
     <!-- Contenido de la página -->
     <div class="container my-4">
-        <h1>Bocadillo de Atún</h1>
-        <img src="../img/bocadillo-atun.jpg" class="img-fluid" alt="Bocadillo de Atún">
-        <p>Un delicioso bocadillo de atún preparado con pan fresco y los mejores ingredientes. Ideal para una comida rápida y saludable.</p>
+        <h1 class="text-center">Bocadillo de Atún</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="../img/bocadillo-atun.jpg" class="img-fluid rounded" alt="Bocadillo de Atún">
+            </div>
+            <div class="col-md-6">
+                <p>
+                    Un delicioso bocadillo de atún preparado con pan fresco y los mejores ingredientes.
+                    Ideal para una comida rápida y saludable.
+                </p>
+                <h4>Ingredientes:</h4>
+                <ul>
+                    <li>Pan crujiente recién horneado</li>
+                    <li>Atún en aceite de oliva</li>
+                    <li>Tomate fresco en rodajas</li>
+                    <li>Lechuga tierna</li>
+                    <li>Mayonesa casera</li>
+                </ul>
+                <h4>Detalles:</h4>
+                <p><strong>Tipo de cocina:</strong> Mediterránea</p>
+                <p><strong>Origen:</strong> España</p>
+                <p><strong>Valoración:</strong> ⭐⭐⭐⭐⭐ (4.8/5 basado en 250 reseñas)</p>
+                <p><strong>Precio:</strong> 6,00€</p>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-light text-center py-3">
         <p>Segueix-nos a les xarxes socials!</p>
-        <a href="#" class="text-light" data-bs-toggle="tooltip" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#" class="text-light" data-bs-toggle="tooltip" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#" class="text-light" data-bs-toggle="tooltip" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="text-light mx-2"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="text-light mx-2"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="text-light mx-2"><i class="fa-brands fa-instagram"></i></a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.getElementById('loginBtn').addEventListener('click', function() {
-            var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
-            loginModal.show();
-        });
-
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var username = document.getElementById('username').value;
-            document.getElementById('loginBtn').innerHTML = "Benvingut " + username;
-            document.getElementById('loginBtn').style.display = 'none';
-            document.getElementById('logoutBtn').style.display = 'inline-block';
-            var modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
-            modal.hide();
-        });
-
-        document.getElementById('logoutBtn').addEventListener('click', function() {
-            document.getElementById('loginBtn').innerHTML = '<i class="fa-solid fa-sign-in-alt"></i> Login';
-            document.getElementById('loginBtn').style.display = 'inline-block';
-            document.getElementById('logoutBtn').style.display = 'none';
-        });
-
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl);
-        });
-    </script>
+    <script src="../js/menu.js"></script>
 </body>
 </html>
