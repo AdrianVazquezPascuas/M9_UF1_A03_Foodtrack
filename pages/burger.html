@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burger</title>
+    <title>Hamburguesa</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -22,88 +22,93 @@
                         <a class="nav-link dropdown-toggle" href="#" id="foodDropdown" role="button" data-bs-toggle="dropdown">Menú</a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#">Freds</a>
+                                <a class="dropdown-item dropdown-toggle" href="frios.html">Fríos</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="entrepans.html">Entrepà de Ibèric</a></li>
-                                    <li><a class="dropdown-item" href="entrepans.html">Entrepà de Formatge</a></li>
+                                    <li><a class="dropdown-item" href="bocatajamon.html">Bocadillo de jamón ibérico</a></li>
+                                    <li><a class="dropdown-item" href="bocataqueso.html">Bocadillo de queso</a></li>
+                                    <li><a class="dropdown-item" href="bocataatun.html">Bocadillo de atún</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#">Calents</a>
+                                <a class="dropdown-item dropdown-toggle" href="calientes.html">Calientes</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="burger.html">Burger</a></li>
                                     <li><a class="dropdown-item" href="frankfurt.html">Frankfurt</a></li>
-                                    <li><a class="dropdown-item" href="bocatajamon.html">Bocadillo de Jamón Ibérico</a></li>
+                                    <li><a class="dropdown-item" href="kebab.html">Kebab</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#">Dolços</a>
+                                <a class="dropdown-item dropdown-toggle" href="dulces.html">Dulces</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="gelats.html">Gelat Magnum</a></li>
-                                    <li><a class="dropdown-item" href="creppe.html">Crêppe de Xocolata</a></li>
+                                    <li><a class="dropdown-item" href="gelats.html">Helado Magnum</a></li>
+                                    <li><a class="dropdown-item" href="creppe.html">Crêppe de Chocolate</a></li>
+                                    <li><a class="dropdown-item" href="coulant.html">Coulant de Chocolate</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#">Begudes</a>
+                                <a class="dropdown-item dropdown-toggle" href="bebidas.html">Bebidas</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="coca-cola.html">Coca Cola</a></li>
                                     <li><a class="dropdown-item" href="cervesa.html">Cervesa</a></li>
+                                    <li><a class="dropdown-item" href="agua.html">Agua</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../qui-som.html">Qui som</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../qui-som.html">Qui som</a></li>
                 </ul>
-                <button class="btn btn-outline-light" id="loginBtn" data-bs-toggle="tooltip" title="Iniciar Sessió"><i class="fa-solid fa-sign-in-alt"></i> Login</button>
-                <button class="btn btn-outline-light" id="logoutBtn" data-bs-toggle="tooltip" title="Tancar Sessió" style="display: none;"><i class="fa-solid fa-sign-out-alt"></i> Logout</button>
             </div>
         </div>
     </nav>
 
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="calientes.html">Calientes</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Hamburguesa</li>
+        </ol>
+    </nav>
+
     <!-- Contenido de la página -->
     <div class="container my-4">
-        <h1>Burger</h1>
-        <img src="../img/burger.jpg" class="img-fluid" alt="Burger">
-        <p>Una deliciosa burger preparada con carne de alta calidad, vegetales frescos y un pan suave. Perfecta para satisfacer tu apetito.</p>
+        <h1 class="text-center">Hamburguesa</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="../img/hamburguesa.jpg" class="img-fluid rounded" alt="Hamburguesa">
+            </div>
+            <div class="col-md-6">
+                <p>
+                    Nuestra hamburguesa está elaborada con carne de res de primera calidad, pan suave, queso fundido, 
+                    lechuga crujiente, tomate fresco y salsa especial de la casa. Todo en su punto perfecto para que 
+                    disfrutes de una experiencia única.
+                </p>
+                <h4>Ingredientes:</h4>
+                <ul>
+                    <li>Carne de res 100%</li>
+                    <li>Pan brioche suave</li>
+                    <li>Queso cheddar fundido</li>
+                    <li>Lechuga fresca</li>
+                    <li>Tomate natural</li>
+                    <li>Salsa especial de la casa</li>
+                </ul>
+                <h4>Detalles:</h4>
+                <p><strong>Tipo de cocina:</strong> Americana</p>
+                <p><strong>Origen:</strong> Estados Unidos</p>
+                <p><strong>Valoración:</strong> ⭐⭐⭐⭐⭐ (4.9/5 basado en 300 reseñas)</p>
+                <p><strong>Precio:</strong> 8,00€</p>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-light text-center py-3">
         <p>Segueix-nos a les xarxes socials!</p>
-        <a href="#" class="text-light" data-bs-toggle="tooltip" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#" class="text-light" data-bs-toggle="tooltip" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#" class="text-light" data-bs-toggle="tooltip" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="text-light mx-2"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="text-light mx-2"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="text-light mx-2"><i class="fa-brands fa-instagram"></i></a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.getElementById('loginBtn').addEventListener('click', function() {
-            var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
-            loginModal.show();
-        });
-
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var username = document.getElementById('username').value;
-            document.getElementById('loginBtn').innerHTML = "Benvingut " + username;
-            document.getElementById('loginBtn').style.display = 'none';
-            document.getElementById('logoutBtn').style.display = 'inline-block';
-            var modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
-            modal.hide();
-        });
-
-        document.getElementById('logoutBtn').addEventListener('click', function() {
-            document.getElementById('loginBtn').innerHTML = '<i class="fa-solid fa-sign-in-alt"></i> Login';
-            document.getElementById('loginBtn').style.display = 'inline-block';
-            document.getElementById('logoutBtn').style.display = 'none';
-        });
-
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl);
-        });
-    </script>
 </body>
 </html>
