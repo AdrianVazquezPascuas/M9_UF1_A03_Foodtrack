@@ -1,10 +1,9 @@
-<!-- qui-som.html -->
 <!DOCTYPE html>
 <html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qui Som - Food Truck</title>
+    <title>Qui Som</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
@@ -14,50 +13,96 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">Food Truck</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="foodDropdown" role="button" data-bs-toggle="dropdown">Menú</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Freds</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="entrepans.html">Entrepà de Ibèric</a></li>
+                                    <li><a class="dropdown-item" href="entrepans.html">Entrepà de Formatge</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Calents</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="burger.html">Burger</a></li>
+                                    <li><a class="dropdown-item" href="frankfurt.html">Frankfurt</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Dolços</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="gelats.html">Gelat Magnum</a></li>
+                                    <li><a class="dropdown-item" href="creppe.html">Crêppe de Xocolata</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Begudes</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="coca-cola.html">Coca Cola</a></li>
+                                    <li><a class="dropdown-item" href="cervesa.html">Cervesa</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="qui-som.html">Qui som</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light" id="loginBtn" data-bs-toggle="tooltip" title="Iniciar Sessió"><i class="fa-solid fa-sign-in-alt"></i> Login</button>
+                <button class="btn btn-outline-light" id="logoutBtn" data-bs-toggle="tooltip" title="Tancar Sessió" style="display: none;"><i class="fa-solid fa-sign-out-alt"></i> Logout</button>
+            </div>
         </div>
     </nav>
-    
+
+    <!-- Contenido de la página -->
     <div class="container my-4">
-        <h1>Qui som?</h1>
-        <p>Som un food truck dedicat a portar menjar deliciós als nostres clients...</p>
+        <h1>Qui Som</h1>
+        <p>Som un equip apassionat per la gastronomia que ofereix plats deliciosos i de qualitat. El nostre objectiu és proporcionar una experiència única als nostres clients amb ingredients frescos i un servei excel·lent.</p>
+        <p>El nostre food truck viatja per diferents llocs, portant els millors sabors a la teva taula. Ens encanta compartir la nostra passió per la cuina i fer que cada àpat sigui especial.</p>
     </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-light text-center py-3">
         <p>Segueix-nos a les xarxes socials!</p>
-        <a href="#" class="text-light"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#" class="text-light"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#" class="text-light"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="text-light" data-bs-toggle="tooltip" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="text-light" data-bs-toggle="tooltip" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="text-light" data-bs-toggle="tooltip" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
     </footer>
-</body>
-</html>
 
-<!-- Ejemplo de una de las 12 páginas de platos, repetir con variaciones -->
-<!DOCTYPE html>
-<html lang="ca">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrepà de Ibèric</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">Food Truck</a>
-        </div>
-    </nav>
-    
-    <div class="container my-4">
-        <h1>Entrepà de Ibèric</h1>
-        <img src="../img/entrepan-iberic.jpg" class="img-fluid" alt="Entrepà de Ibèric">
-        <p>Un deliciós entrepà amb pernil ibèric de qualitat.</p>
-    </div>
-    
-    <footer class="bg-dark text-light text-center py-3">
-        <p>Segueix-nos a les xarxes socials!</p>
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+            loginModal.show();
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            document.getElementById('loginBtn').innerHTML = "Benvingut " + username;
+            document.getElementById('loginBtn').style.display = 'none';
+            document.getElementById('logoutBtn').style.display = 'inline-block';
+            var modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+            modal.hide();
+        });
+
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            document.getElementById('loginBtn').innerHTML = '<i class="fa-solid fa-sign-in-alt"></i> Login';
+            document.getElementById('loginBtn').style.display = 'inline-block';
+            document.getElementById('logoutBtn').style.display = 'none';
+        });
+
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
 </body>
 </html>
