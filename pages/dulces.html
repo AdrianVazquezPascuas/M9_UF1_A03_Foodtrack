@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../css/index.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="../img/logo.png" alt="Food Truck Logo" width="40" height="40" class="d-inline-block align-text-top">
+            </a>
+
             <a class="navbar-brand" href="../index.html">Food Truck</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -22,7 +28,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="foodDropdown" role="button" data-bs-toggle="dropdown">Menú</a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="frios.html">Fríos</a>
+                                <a class="dropdown-item dropdown-toggle" href="../frios.html">Fríos</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="bocatajamon.html">Bocadillo de Jamón Ibérico</a></li>
                                     <li><a class="dropdown-item" href="bocataqueso.html">Bocadillo de Queso</a></li>
@@ -34,6 +40,10 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="burger.html">Burger</a></li>
                                     <li><a class="dropdown-item" href="frankfurt.html">Frankfurt</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="kebab.html">Kebab</a>
+                                    </li>
+
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
@@ -65,30 +75,64 @@
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
             <li class="breadcrumb-item active" aria-current="page">Dulces</li>
         </ol>
     </nav>
-
-    <!-- Contenido de la página -->
     <div class="container my-4">
-        <h1>Dulces</h1>
-        <p>Aquí tienes estas opciones:</p>
-        <ul>
-            <li><a href="gelats.html">Helado Magnum</a></li>
-            <li><a href="creppe.html">Crêppe de Chocolate</a></li>
-            <li><a href="coulant.html">Coulant de Chocolate</a></li>
-        </ul>
+        <h1 class="text-center">Bebidas</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="gelats.html" class="text-decoration-none">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Helado Magnum</h5>
+                        </div>
+                        <img src="../img/helado-magnum.jpg" class="card-img-top img-size" alt="Coca Cola">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="creppe.html" class="text-decoration-none">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Creppe Chocolate</h5>
+                        </div>
+                        <img src="../img/creppe-chocolate.png" class="card-img-top img-size" alt="Cervesa">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="coulant.html" class="text-decoration-none">
+                    <div class="card ">
+                        <div class="card-body ">
+                            <h5 class="card-title text-center ">Coulant Chocolate</h5>
+                        </div>
+                        <img src="../img/coulant-chocolate.png " class="card-img-top img-size " alt="Aigua ">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light text-center py-3">
+    <footer class="bg-dark text-light text-center py-3 ">
         <p>Segueix-nos a les xarxes socials!</p>
-        <a href="#" class="text-light" data-bs-toggle="tooltip" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#" class="text-light" data-bs-toggle="tooltip" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#" class="text-light" data-bs-toggle="tooltip" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="# " class="text-light mx-2 " data-bs-toggle="tooltip " title="Facebook ">
+            <i class="fa-brands fa-facebook "></i>
+        </a>
+        <a href="# " class="text-light mx-2 " data-bs-toggle="tooltip " title="Twitter ">
+            <i class="fa-brands fa-twitter "></i>
+        </a>
+        <a href="# " class="text-light mx-2 " data-bs-toggle="tooltip " title="Instagram ">
+            <i class="fa-brands fa-instagram "></i>
+        </a>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js "></script>
+
 </body>
+
 </html>
