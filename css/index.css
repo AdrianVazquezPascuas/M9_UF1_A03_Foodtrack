@@ -1,11 +1,9 @@
 .carousel-item img {
     width: 100%;
     height: 500px;
-    /* Ajusta la altura según tus necesidades */
     object-fit: cover;
 }
 
-/* Estilos para submenús */
 .dropdown-submenu {
     position: relative;
 }
@@ -22,18 +20,16 @@
     display: block;
 }
 
-/* Establece el tamaño de las imágenes */
 img {
     width: 100%;
-    height: 300px; /* Ajusta la altura según tus necesidades */
-    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
-    border-radius: 8px; /* Opcional: para darle bordes redondeados */
+    height: 300px; 
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-/* Si quieres especificar imágenes en contenedores particulares */
 img.img-fluid {
     width: 100%;
-    height: 300px; /* Ajusta la altura según tus necesidades */
+    height: 300px; 
     object-fit: cover;
     border-radius: 8px;
 }
